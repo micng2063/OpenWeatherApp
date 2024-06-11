@@ -1,0 +1,13 @@
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\bin\Debug\OpenWeatherApp.exe.config
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\bin\Debug\OpenWeatherApp.exe
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\bin\Debug\OpenWeatherApp.pdb
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\obj\Debug\OpenWeatherApp.csproj.AssemblyReference.cache
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\obj\Debug\OpenWeatherApp.Form1.resources
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\obj\Debug\OpenWeatherApp.Properties.Resources.resources
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\obj\Debug\OpenWeatherApp.csproj.GenerateResource.cache
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\obj\Debug\OpenWeatherApp.csproj.CoreCompileInputs.cache
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\obj\Debug\OpenWeatherApp.exe
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\obj\Debug\OpenWeatherApp.pdb
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\bin\Debug\Newtonsoft.Json.dll
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\bin\Debug\Newtonsoft.Json.xml
+D:\OpenWeatherApp\OpenWeatherApp\OpenWeatherApp\obj\Debug\OpenWeatherApp.csproj.CopyComplete
