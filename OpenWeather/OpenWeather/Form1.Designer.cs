@@ -31,20 +31,20 @@ namespace OpenWeather
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.TBCity = new System.Windows.Forms.TextBox();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.labCondition = new System.Windows.Forms.Label();
+            this.labDetails = new System.Windows.Forms.Label();
+            this.labSunrise = new System.Windows.Forms.Label();
+            this.labSunset = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.labPressure = new System.Windows.Forms.Label();
+            this.labWindSpeed = new System.Windows.Forms.Label();
+            this.picIcon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,73 +60,74 @@ namespace OpenWeather
             this.label1.Text = "City:";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // textBox1
+            // TBCity
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 362);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 20);
-            this.textBox1.TabIndex = 1;
+            this.TBCity.Location = new System.Drawing.Point(101, 362);
+            this.TBCity.Name = "TBCity";
+            this.TBCity.Size = new System.Drawing.Size(169, 20);
+            this.TBCity.TabIndex = 1;
             // 
-            // button1
+            // BtnSearch
             // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(296, 359);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Search for City";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSearch.Location = new System.Drawing.Point(296, 359);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(75, 23);
+            this.BtnSearch.TabIndex = 2;
+            this.BtnSearch.Text = "Search for City";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch);
             // 
-            // label2
+            // labCondition
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label2.Location = new System.Drawing.Point(49, 398);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Condition:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labCondition.AutoSize = true;
+            this.labCondition.BackColor = System.Drawing.Color.Transparent;
+            this.labCondition.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCondition.ForeColor = System.Drawing.Color.GhostWhite;
+            this.labCondition.Location = new System.Drawing.Point(49, 398);
+            this.labCondition.Name = "labCondition";
+            this.labCondition.Size = new System.Drawing.Size(91, 23);
+            this.labCondition.TabIndex = 3;
+            this.labCondition.Text = "Condition:";
+            this.labCondition.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // labDetails
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label3.Location = new System.Drawing.Point(49, 445);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Details:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.labDetails.AutoSize = true;
+            this.labDetails.BackColor = System.Drawing.Color.Transparent;
+            this.labDetails.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDetails.ForeColor = System.Drawing.Color.GhostWhite;
+            this.labDetails.Location = new System.Drawing.Point(49, 445);
+            this.labDetails.Name = "labDetails";
+            this.labDetails.Size = new System.Drawing.Size(71, 23);
+            this.labDetails.TabIndex = 4;
+            this.labDetails.Text = "Details:";
+            this.labDetails.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // labSunrise
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label4.Location = new System.Drawing.Point(388, 398);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 23);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Sunrise:";
+            this.labSunrise.AutoSize = true;
+            this.labSunrise.BackColor = System.Drawing.Color.Transparent;
+            this.labSunrise.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labSunrise.ForeColor = System.Drawing.Color.GhostWhite;
+            this.labSunrise.Location = new System.Drawing.Point(388, 398);
+            this.labSunrise.Name = "labSunrise";
+            this.labSunrise.Size = new System.Drawing.Size(74, 23);
+            this.labSunrise.TabIndex = 5;
+            this.labSunrise.Text = "Sunrise:";
+            this.labSunrise.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
+            // labSunset
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label5.Location = new System.Drawing.Point(388, 442);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 23);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Sunset:";
+            this.labSunset.AutoSize = true;
+            this.labSunset.BackColor = System.Drawing.Color.Transparent;
+            this.labSunset.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labSunset.ForeColor = System.Drawing.Color.GhostWhite;
+            this.labSunset.Location = new System.Drawing.Point(388, 442);
+            this.labSunset.Name = "labSunset";
+            this.labSunset.Size = new System.Drawing.Size(69, 23);
+            this.labSunset.TabIndex = 6;
+            this.labSunset.Text = "Sunset:";
             // 
             // label6
             // 
@@ -179,40 +180,41 @@ namespace OpenWeather
             this.label9.Text = "N/A";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label10
+            // labPressure
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label10.Location = new System.Drawing.Point(600, 442);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 23);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Pressure:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.labPressure.AutoSize = true;
+            this.labPressure.BackColor = System.Drawing.Color.Transparent;
+            this.labPressure.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPressure.ForeColor = System.Drawing.Color.GhostWhite;
+            this.labPressure.Location = new System.Drawing.Point(600, 442);
+            this.labPressure.Name = "labPressure";
+            this.labPressure.Size = new System.Drawing.Size(85, 23);
+            this.labPressure.TabIndex = 10;
+            this.labPressure.Text = "Pressure:";
+            this.labPressure.Click += new System.EventHandler(this.label10_Click);
             // 
-            // label11
+            // labWindSpeed
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label11.Location = new System.Drawing.Point(600, 398);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 23);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Wind Speed:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.labWindSpeed.AutoSize = true;
+            this.labWindSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.labWindSpeed.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labWindSpeed.ForeColor = System.Drawing.Color.GhostWhite;
+            this.labWindSpeed.Location = new System.Drawing.Point(600, 398);
+            this.labWindSpeed.Name = "labWindSpeed";
+            this.labWindSpeed.Size = new System.Drawing.Size(110, 23);
+            this.labWindSpeed.TabIndex = 9;
+            this.labWindSpeed.Text = "Wind Speed:";
+            this.labWindSpeed.Click += new System.EventHandler(this.label11_Click);
             // 
-            // pictureBox1
+            // picIcon
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(392, 332);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.picIcon.BackColor = System.Drawing.Color.Transparent;
+            this.picIcon.Location = new System.Drawing.Point(392, 332);
+            this.picIcon.Name = "picIcon";
+            this.picIcon.Size = new System.Drawing.Size(100, 50);
+            this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picIcon.TabIndex = 13;
+            this.picIcon.TabStop = false;
             // 
             // Form1
             // 
@@ -221,25 +223,25 @@ namespace OpenWeather
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(839, 490);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picIcon);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.labPressure);
+            this.Controls.Add(this.labWindSpeed);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labSunset);
+            this.Controls.Add(this.labSunrise);
+            this.Controls.Add(this.labDetails);
+            this.Controls.Add(this.labCondition);
+            this.Controls.Add(this.BtnSearch);
+            this.Controls.Add(this.TBCity);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,19 +250,19 @@ namespace OpenWeather
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TBCity;
+        private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.Label labCondition;
+        private System.Windows.Forms.Label labDetails;
+        private System.Windows.Forms.Label labSunrise;
+        private System.Windows.Forms.Label labSunset;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labPressure;
+        private System.Windows.Forms.Label labWindSpeed;
+        private System.Windows.Forms.PictureBox picIcon;
     }
 }
 
