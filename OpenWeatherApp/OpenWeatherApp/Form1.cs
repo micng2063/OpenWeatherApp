@@ -20,31 +20,64 @@ namespace OpenWeatherApp
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void Form1_Load(object sender, EventArgs e){        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            GetWeather(textCity.Text);
+            string city = textCity.Text; 
+            GetGeocode(city); 
         }
 
         string APIKey = "9064b1e7693ea2c297ba7f3c8c90828b";
 
-        void GetWeather(string city)
+        // Method to get geocode (latitude and longitude) of a city
+        void GetGeocode(string city)
         {
+            // Ensure TLS 1.2 is used for secure communication
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             using (WebClient Web = new WebClient())
             {
-                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", city, APIKey);
-                var json = Web.DownloadString(url);
+                // Construct the geocode API URL with the city name and API key
+                string geocodeUrl = string.Format("http://api.openweathermap.org/geo/1.0/direct?q={0}&limit=1&appid={1}", city, APIKey);
+                var geocodeJson = Web.DownloadString(geocodeUrl); // Download the JSON response
 
-                WeatherInfo.Root Info = JsonConvert.DeserializeObject<WeatherInfo.Root>(json);
+                // Deserialize the JSON response to a list of GeocodeInfo objects
+                List<GeocodeInfo> geocodeInfo = JsonConvert.DeserializeObject<List<GeocodeInfo>>(geocodeJson);
 
-                Console.WriteLine(json);
+                // Check if any geocode information is returned
+                if (geocodeInfo != null && geocodeInfo.Count > 0)
+                {
+                    double lat = geocodeInfo[0].Lat;
+                    double lon = geocodeInfo[0].Lon;
 
+                    // Call the method to get weather data using the latitude and longitude
+                    GetWeather(lat, lon);
+                }
+                else
+                {
+                    // Show a message box if the city is not found
+                    MessageBox.Show("City not found.");
+                }
+            }
+        }
+
+        // Method to get weather data using latitude and longitude
+        void GetWeather(double lat, double lon)
+        {
+            using (WebClient Web = new WebClient())
+            {
+                // Construct the weather API URL with the latitude, longitude, and API key
+                string weatherUrl = string.Format("https://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid={2}", lat, lon, APIKey);
+                var weatherJson = Web.DownloadString(weatherUrl); // Download the JSON response
+
+                // Deserialize the JSON response to a WeatherInfo.Root object
+                WeatherInfo.Root Info = JsonConvert.DeserializeObject<WeatherInfo.Root>(weatherJson);
+
+                // Print the JSON response to the console for debugging
+                Console.WriteLine(weatherJson); 
+
+                // Update the UI with the weather information
                 textCondition.Text = Info.Weather[0].Main;
                 textDetails.Text = Info.Weather[0].Description;
 
@@ -56,11 +89,11 @@ namespace OpenWeatherApp
             }
         }
 
-        DateTime ConvertDateTime(long milisec)
+        // Method to convert Unix time (seconds since epoch) to DateTime
+        DateTime ConvertDateTime(long seconds)
         {
-            DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
-            day = day.AddSeconds(milisec).ToLocalTime();
-            return day;
+            DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc); // Unix epoch start date
+            return epoch.AddSeconds(seconds).ToLocalTime(); // Convert to local time
         }
     }
 }
