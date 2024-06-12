@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,14 +21,18 @@ namespace OpenWeatherApp
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e){        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // You can add any initialization code here if needed
+        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string city = textCity.Text; 
-            GetGeocode(city); 
+            string city = textCity.Text; // Get the city name from the text box
+            GetGeocode(city); // Call the method to get geocode and weather data
         }
 
+        // OpenWeather API key
         string APIKey = "9064b1e7693ea2c297ba7f3c8c90828b";
 
         // Method to get geocode (latitude and longitude) of a city
@@ -48,8 +53,8 @@ namespace OpenWeatherApp
                 // Check if any geocode information is returned
                 if (geocodeInfo != null && geocodeInfo.Count > 0)
                 {
-                    double lat = geocodeInfo[0].Lat;
-                    double lon = geocodeInfo[0].Lon;
+                    double lat = geocodeInfo[0].Lat; // Get the latitude
+                    double lon = geocodeInfo[0].Lon; // Get the longitude
 
                     // Call the method to get weather data using the latitude and longitude
                     GetWeather(lat, lon);
@@ -65,6 +70,8 @@ namespace OpenWeatherApp
         // Method to get weather data using latitude and longitude
         void GetWeather(double lat, double lon)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             using (WebClient Web = new WebClient())
             {
                 // Construct the weather API URL with the latitude, longitude, and API key
@@ -74,12 +81,11 @@ namespace OpenWeatherApp
                 // Deserialize the JSON response to a WeatherInfo.Root object
                 WeatherInfo.Root Info = JsonConvert.DeserializeObject<WeatherInfo.Root>(weatherJson);
 
-                // Print the JSON response to the console for debugging
-                Console.WriteLine(weatherJson); 
+                Console.WriteLine(weatherJson); // Print the JSON response to the console for debugging
 
                 // Update the UI with the weather information
                 textCondition.Text = Info.Weather[0].Main;
-                textDetails.Text = Info.Weather[0].Description;
+                textDetails.Text = ToCapitalize(Info.Weather[0].Description);
 
                 textSunset.Text = ConvertDateTime(Info.Sys.Sunset).ToString("HH:mm:ss");
                 textSunrise.Text = ConvertDateTime(Info.Sys.Sunrise).ToString("HH:mm:ss");
@@ -94,6 +100,13 @@ namespace OpenWeatherApp
         {
             DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc); // Unix epoch start date
             return epoch.AddSeconds(seconds).ToLocalTime(); // Convert to local time
+        }
+
+        // Method to capitalize the first letter of each word in a string
+        string ToCapitalize(string input)
+        {
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+            return textInfo.ToTitleCase(input);
         }
     }
 }

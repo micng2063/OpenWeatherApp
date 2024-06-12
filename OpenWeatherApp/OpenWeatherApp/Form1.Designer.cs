@@ -45,6 +45,7 @@ namespace OpenWeatherApp
             this.textCondition = new System.Windows.Forms.Label();
             this.textCity = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.labTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labCity
@@ -221,6 +222,17 @@ namespace OpenWeatherApp
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // labTime
+            // 
+            this.labTime.AutoSize = true;
+            this.labTime.BackColor = System.Drawing.Color.Transparent;
+            this.labTime.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labTime.Location = new System.Drawing.Point(429, 308);
+            this.labTime.Name = "labTime";
+            this.labTime.Size = new System.Drawing.Size(0, 23);
+            this.labTime.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,6 +241,7 @@ namespace OpenWeatherApp
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labTime);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textCity);
             this.Controls.Add(this.textDetails);
@@ -270,6 +283,7 @@ namespace OpenWeatherApp
         private System.Windows.Forms.Label textCondition;
         private System.Windows.Forms.TextBox textCity;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label labTime;
     }
 }
 
