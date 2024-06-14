@@ -29,7 +29,6 @@ namespace OpenWeatherApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.labCity = new System.Windows.Forms.Label();
             this.labCondition = new System.Windows.Forms.Label();
             this.labDetails = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@ namespace OpenWeatherApp
             this.labCity.BackColor = System.Drawing.Color.Transparent;
             this.labCity.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labCity.Location = new System.Drawing.Point(70, 309);
+            this.labCity.Location = new System.Drawing.Point(70, 326);
             this.labCity.Name = "labCity";
             this.labCity.Size = new System.Drawing.Size(46, 23);
             this.labCity.TabIndex = 0;
@@ -68,7 +67,7 @@ namespace OpenWeatherApp
             this.labCondition.BackColor = System.Drawing.Color.Transparent;
             this.labCondition.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCondition.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labCondition.Location = new System.Drawing.Point(70, 353);
+            this.labCondition.Location = new System.Drawing.Point(70, 370);
             this.labCondition.Name = "labCondition";
             this.labCondition.Size = new System.Drawing.Size(83, 19);
             this.labCondition.TabIndex = 1;
@@ -81,7 +80,7 @@ namespace OpenWeatherApp
             this.labDetails.BackColor = System.Drawing.Color.Transparent;
             this.labDetails.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDetails.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labDetails.Location = new System.Drawing.Point(70, 400);
+            this.labDetails.Location = new System.Drawing.Point(70, 417);
             this.labDetails.Name = "labDetails";
             this.labDetails.Size = new System.Drawing.Size(63, 19);
             this.labDetails.TabIndex = 2;
@@ -94,7 +93,7 @@ namespace OpenWeatherApp
             this.labSunset.BackColor = System.Drawing.Color.Transparent;
             this.labSunset.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labSunset.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labSunset.Location = new System.Drawing.Point(290, 400);
+            this.labSunset.Location = new System.Drawing.Point(290, 417);
             this.labSunset.Name = "labSunset";
             this.labSunset.Size = new System.Drawing.Size(63, 19);
             this.labSunset.TabIndex = 4;
@@ -107,7 +106,7 @@ namespace OpenWeatherApp
             this.labSunrise.BackColor = System.Drawing.Color.Transparent;
             this.labSunrise.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labSunrise.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labSunrise.Location = new System.Drawing.Point(290, 353);
+            this.labSunrise.Location = new System.Drawing.Point(290, 370);
             this.labSunrise.Name = "labSunrise";
             this.labSunrise.Size = new System.Drawing.Size(67, 19);
             this.labSunrise.TabIndex = 3;
@@ -120,7 +119,7 @@ namespace OpenWeatherApp
             this.labPressure.BackColor = System.Drawing.Color.Transparent;
             this.labPressure.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPressure.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labPressure.Location = new System.Drawing.Point(519, 400);
+            this.labPressure.Location = new System.Drawing.Point(519, 417);
             this.labPressure.Name = "labPressure";
             this.labPressure.Size = new System.Drawing.Size(75, 19);
             this.labPressure.TabIndex = 6;
@@ -133,7 +132,7 @@ namespace OpenWeatherApp
             this.labWindspeed.BackColor = System.Drawing.Color.Transparent;
             this.labWindspeed.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labWindspeed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labWindspeed.Location = new System.Drawing.Point(519, 353);
+            this.labWindspeed.Location = new System.Drawing.Point(519, 370);
             this.labWindspeed.Name = "labWindspeed";
             this.labWindspeed.Size = new System.Drawing.Size(90, 19);
             this.labWindspeed.TabIndex = 5;
@@ -146,7 +145,7 @@ namespace OpenWeatherApp
             this.textSunrise.BackColor = System.Drawing.Color.Transparent;
             this.textSunrise.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSunrise.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textSunrise.Location = new System.Drawing.Point(363, 353);
+            this.textSunrise.Location = new System.Drawing.Point(363, 370);
             this.textSunrise.Name = "textSunrise";
             this.textSunrise.Size = new System.Drawing.Size(33, 19);
             this.textSunrise.TabIndex = 7;
@@ -159,7 +158,7 @@ namespace OpenWeatherApp
             this.textSunset.BackColor = System.Drawing.Color.Transparent;
             this.textSunset.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSunset.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textSunset.Location = new System.Drawing.Point(363, 400);
+            this.textSunset.Location = new System.Drawing.Point(363, 417);
             this.textSunset.Name = "textSunset";
             this.textSunset.Size = new System.Drawing.Size(33, 19);
             this.textSunset.TabIndex = 8;
@@ -172,7 +171,7 @@ namespace OpenWeatherApp
             this.textPressure.BackColor = System.Drawing.Color.Transparent;
             this.textPressure.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPressure.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textPressure.Location = new System.Drawing.Point(617, 400);
+            this.textPressure.Location = new System.Drawing.Point(617, 417);
             this.textPressure.Name = "textPressure";
             this.textPressure.Size = new System.Drawing.Size(33, 19);
             this.textPressure.TabIndex = 10;
@@ -185,7 +184,7 @@ namespace OpenWeatherApp
             this.textWindspeed.BackColor = System.Drawing.Color.Transparent;
             this.textWindspeed.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textWindspeed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textWindspeed.Location = new System.Drawing.Point(617, 353);
+            this.textWindspeed.Location = new System.Drawing.Point(617, 370);
             this.textWindspeed.Name = "textWindspeed";
             this.textWindspeed.Size = new System.Drawing.Size(33, 19);
             this.textWindspeed.TabIndex = 9;
@@ -198,7 +197,7 @@ namespace OpenWeatherApp
             this.textDetails.BackColor = System.Drawing.Color.Transparent;
             this.textDetails.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDetails.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textDetails.Location = new System.Drawing.Point(151, 400);
+            this.textDetails.Location = new System.Drawing.Point(151, 417);
             this.textDetails.Name = "textDetails";
             this.textDetails.Size = new System.Drawing.Size(33, 19);
             this.textDetails.TabIndex = 12;
@@ -211,7 +210,7 @@ namespace OpenWeatherApp
             this.textCondition.BackColor = System.Drawing.Color.Transparent;
             this.textCondition.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCondition.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textCondition.Location = new System.Drawing.Point(151, 353);
+            this.textCondition.Location = new System.Drawing.Point(151, 370);
             this.textCondition.Name = "textCondition";
             this.textCondition.Size = new System.Drawing.Size(33, 19);
             this.textCondition.TabIndex = 11;
@@ -220,7 +219,7 @@ namespace OpenWeatherApp
             // textCity
             // 
             this.textCity.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.textCity.Location = new System.Drawing.Point(122, 312);
+            this.textCity.Location = new System.Drawing.Point(122, 329);
             this.textCity.Name = "textCity";
             this.textCity.Size = new System.Drawing.Size(186, 20);
             this.textCity.TabIndex = 13;
@@ -229,7 +228,7 @@ namespace OpenWeatherApp
             // 
             this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(321, 309);
+            this.btnSearch.Location = new System.Drawing.Point(321, 326);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 14;
@@ -243,7 +242,7 @@ namespace OpenWeatherApp
             this.labTime.BackColor = System.Drawing.Color.Transparent;
             this.labTime.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTime.ForeColor = System.Drawing.SystemColors.Control;
-            this.labTime.Location = new System.Drawing.Point(431, 309);
+            this.labTime.Location = new System.Drawing.Point(431, 326);
             this.labTime.Name = "labTime";
             this.labTime.Size = new System.Drawing.Size(0, 23);
             this.labTime.TabIndex = 16;
@@ -252,10 +251,10 @@ namespace OpenWeatherApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::OpenWeatherApp.Properties.Resources.BGSunset;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(749, 470);
             this.Controls.Add(this.labTime);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textCity);
