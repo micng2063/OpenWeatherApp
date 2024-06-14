@@ -23,17 +23,18 @@ namespace OpenWeatherApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // You can add any initialization code here if needed
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string city = textCity.Text; // Get the city name from the text box
-            GetGeocode(city); // Call the method to get geocode and weather data
+            GetGeocode(city); 
         }
 
-        // OpenWeather API key
-        string APIKey = "9064b1e7693ea2c297ba7f3c8c90828b";
+        // API keys
+        string OpenWeatherAPIKey = "9064b1e7693ea2c297ba7f3c8c90828b";
+        string TimeZoneDBAPIKey = "M3Z3DN19HFRQ";
 
         // Method to get geocode (latitude and longitude) of a city
         void GetGeocode(string city)
@@ -44,7 +45,7 @@ namespace OpenWeatherApp
             using (WebClient Web = new WebClient())
             {
                 // Construct the geocode API URL with the city name and API key
-                string geocodeUrl = string.Format("http://api.openweathermap.org/geo/1.0/direct?q={0}&limit=1&appid={1}", city, APIKey);
+                string geocodeUrl = string.Format("http://api.openweathermap.org/geo/1.0/direct?q={0}&limit=1&appid={1}", city, OpenWeatherAPIKey);
                 var geocodeJson = Web.DownloadString(geocodeUrl); // Download the JSON response
 
                 // Deserialize the JSON response to a list of GeocodeInfo objects
@@ -58,6 +59,8 @@ namespace OpenWeatherApp
 
                     // Call the method to get weather data using the latitude and longitude
                     GetWeather(lat, lon);
+
+                    GetTime(lat, lon);
                 }
                 else
                 {
@@ -75,7 +78,7 @@ namespace OpenWeatherApp
             using (WebClient Web = new WebClient())
             {
                 // Construct the weather API URL with the latitude, longitude, and API key
-                string weatherUrl = string.Format("https://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid={2}", lat, lon, APIKey);
+                string weatherUrl = string.Format("https://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&appid={2}", lat, lon, OpenWeatherAPIKey);
                 var weatherJson = Web.DownloadString(weatherUrl); // Download the JSON response
 
                 // Deserialize the JSON response to a WeatherInfo.Root object
@@ -95,6 +98,25 @@ namespace OpenWeatherApp
             }
         }
 
+        // Method to get the current time of the city using latitude and longitude
+        void GetTime(double lat, double lon)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            using (WebClient Web = new WebClient())
+            {
+                // Construct the TimeZoneDB API URL with the latitude and longitude
+                string timeUrl = string.Format("http://api.timezonedb.com/v2.1/get-time-zone?key={0}&format=json&by=position&lat={1}&lng={2}", TimeZoneDBAPIKey, lat, lon);
+                var timeJson = Web.DownloadString(timeUrl); // Download the JSON response
+
+                // Deserialize the JSON response to a TimeInfo object
+                TimeInfo timeInfo = JsonConvert.DeserializeObject<TimeInfo>(timeJson);
+
+                // Update the UI with the current time
+                labTime.Text = DateTime.Parse(timeInfo.Formatted).ToString("HH:mm:ss");
+            }
+        }
+
         // Method to convert Unix time (seconds since epoch) to DateTime
         DateTime ConvertDateTime(long seconds)
         {
@@ -108,5 +130,6 @@ namespace OpenWeatherApp
             TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
             return textInfo.ToTitleCase(input);
         }
+
     }
 }

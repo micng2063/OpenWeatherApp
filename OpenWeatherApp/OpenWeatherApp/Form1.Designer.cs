@@ -50,6 +50,7 @@ namespace OpenWeatherApp
             // 
             // labCity
             // 
+            this.labCity.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.labCity.AutoSize = true;
             this.labCity.BackColor = System.Drawing.Color.Transparent;
             this.labCity.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,6 +63,7 @@ namespace OpenWeatherApp
             // 
             // labCondition
             // 
+            this.labCondition.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.labCondition.AutoSize = true;
             this.labCondition.BackColor = System.Drawing.Color.Transparent;
             this.labCondition.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +76,7 @@ namespace OpenWeatherApp
             // 
             // labDetails
             // 
+            this.labDetails.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.labDetails.AutoSize = true;
             this.labDetails.BackColor = System.Drawing.Color.Transparent;
             this.labDetails.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,6 +89,7 @@ namespace OpenWeatherApp
             // 
             // labSunset
             // 
+            this.labSunset.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.labSunset.AutoSize = true;
             this.labSunset.BackColor = System.Drawing.Color.Transparent;
             this.labSunset.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,6 +102,7 @@ namespace OpenWeatherApp
             // 
             // labSunrise
             // 
+            this.labSunrise.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.labSunrise.AutoSize = true;
             this.labSunrise.BackColor = System.Drawing.Color.Transparent;
             this.labSunrise.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,6 +115,7 @@ namespace OpenWeatherApp
             // 
             // labPressure
             // 
+            this.labPressure.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.labPressure.AutoSize = true;
             this.labPressure.BackColor = System.Drawing.Color.Transparent;
             this.labPressure.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,6 +128,7 @@ namespace OpenWeatherApp
             // 
             // labWindspeed
             // 
+            this.labWindspeed.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.labWindspeed.AutoSize = true;
             this.labWindspeed.BackColor = System.Drawing.Color.Transparent;
             this.labWindspeed.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,6 +141,7 @@ namespace OpenWeatherApp
             // 
             // textSunrise
             // 
+            this.textSunrise.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.textSunrise.AutoSize = true;
             this.textSunrise.BackColor = System.Drawing.Color.Transparent;
             this.textSunrise.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,6 +154,7 @@ namespace OpenWeatherApp
             // 
             // textSunset
             // 
+            this.textSunset.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.textSunset.AutoSize = true;
             this.textSunset.BackColor = System.Drawing.Color.Transparent;
             this.textSunset.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,6 +167,7 @@ namespace OpenWeatherApp
             // 
             // textPressure
             // 
+            this.textPressure.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.textPressure.AutoSize = true;
             this.textPressure.BackColor = System.Drawing.Color.Transparent;
             this.textPressure.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,6 +180,7 @@ namespace OpenWeatherApp
             // 
             // textWindspeed
             // 
+            this.textWindspeed.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.textWindspeed.AutoSize = true;
             this.textWindspeed.BackColor = System.Drawing.Color.Transparent;
             this.textWindspeed.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,6 +193,7 @@ namespace OpenWeatherApp
             // 
             // textDetails
             // 
+            this.textDetails.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.textDetails.AutoSize = true;
             this.textDetails.BackColor = System.Drawing.Color.Transparent;
             this.textDetails.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,6 +206,7 @@ namespace OpenWeatherApp
             // 
             // textCondition
             // 
+            this.textCondition.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.textCondition.AutoSize = true;
             this.textCondition.BackColor = System.Drawing.Color.Transparent;
             this.textCondition.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,6 +219,7 @@ namespace OpenWeatherApp
             // 
             // textCity
             // 
+            this.textCity.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.textCity.Location = new System.Drawing.Point(122, 312);
             this.textCity.Name = "textCity";
             this.textCity.Size = new System.Drawing.Size(186, 20);
@@ -213,6 +227,7 @@ namespace OpenWeatherApp
             // 
             // btnSearch
             // 
+            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(321, 309);
             this.btnSearch.Name = "btnSearch";
@@ -227,11 +242,11 @@ namespace OpenWeatherApp
             this.labTime.AutoSize = true;
             this.labTime.BackColor = System.Drawing.Color.Transparent;
             this.labTime.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labTime.Location = new System.Drawing.Point(429, 308);
+            this.labTime.ForeColor = System.Drawing.SystemColors.Control;
+            this.labTime.Location = new System.Drawing.Point(431, 309);
             this.labTime.Name = "labTime";
             this.labTime.Size = new System.Drawing.Size(0, 23);
-            this.labTime.TabIndex = 15;
+            this.labTime.TabIndex = 16;
             // 
             // Form1
             // 
