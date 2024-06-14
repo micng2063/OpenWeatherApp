@@ -251,10 +251,10 @@ namespace OpenWeatherApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::OpenWeatherApp.Properties.Resources.BGSunset;
+            this.BackgroundImage = global::OpenWeatherApp.Properties.Resources.BGMorning;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(749, 470);
+            this.ClientSize = new System.Drawing.Size(712, 470);
             this.Controls.Add(this.labTime);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textCity);

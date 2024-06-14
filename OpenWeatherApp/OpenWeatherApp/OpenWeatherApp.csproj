@@ -70,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -84,6 +85,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGMorning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGSunrise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGAfternoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGNoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGSunset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGNight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

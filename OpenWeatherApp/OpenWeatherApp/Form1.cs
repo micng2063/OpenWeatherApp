@@ -113,7 +113,40 @@ namespace OpenWeatherApp
                 TimeInfo timeInfo = JsonConvert.DeserializeObject<TimeInfo>(timeJson);
 
                 // Update the UI with the current time
-                labTime.Text = DateTime.Parse(timeInfo.Formatted).ToString("HH:mm:ss");
+
+                DateTime cityTime = DateTime.Parse(timeInfo.Formatted);
+                labTime.Text = cityTime.ToString("HH:mm:ss");
+
+                SetBackgroundImage(cityTime);
+            }
+        }
+
+        void SetBackgroundImage(DateTime time)
+        {
+            // Set the background image based on the time ranges
+            if (time.Hour >= 4 && time.Hour < 6)
+            {
+                this.BackgroundImage = Properties.Resources.BGSunrise;
+            }
+            else if (time.Hour >= 6 && time.Hour < 11)
+            {
+                this.BackgroundImage = Properties.Resources.BGMorning;
+            }
+            else if (time.Hour >= 11 && time.Hour < 14)
+            {
+                this.BackgroundImage = Properties.Resources.BGNoon;
+            }
+            else if (time.Hour >= 14 && time.Hour < 16)
+            {
+                this.BackgroundImage = Properties.Resources.BGAfternoon;
+            }
+            else if (time.Hour >= 16 && time.Hour < 18)
+            {
+                this.BackgroundImage = Properties.Resources.BGSunset;
+            }
+            else if (time.Hour >= 18 || time.Hour < 4)
+            {
+                this.BackgroundImage = Properties.Resources.BGNight;
             }
         }
 
